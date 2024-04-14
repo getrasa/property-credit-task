@@ -10,9 +10,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 239, 243, 248;
+    --background-end-rgb: 239, 243, 248;
   }
 }
 
@@ -24,10 +24,28 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  background: "#EFF3F8";
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* SKELETON */
+
+.p-component,
+.p-component *,
+.p-skeleton,
+.skeleton * {
+    box-sizing: border-box;
+}
+
+.p-skeleton {
+    background-color: #e9ecef;
+    border-radius: 3px;
+}
+.p-skeleton:after {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
 }
